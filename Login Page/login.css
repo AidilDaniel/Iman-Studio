@@ -64,7 +64,7 @@ nav ul li a
 
 nav ul li a:hover
 {
-    color: rgb(224, 221, 49);
+    color: rgb(255,221,0);
 }
 
 .row
@@ -94,7 +94,7 @@ nav ul li a:hover
 
 .main-heading
 {
-    color: rgba(255, 230, 0, 0.938);
+    color: rgba(255,221,0);
     padding-bottom: 20px;
 }
 
@@ -127,7 +127,7 @@ nav ul li a:hover
 	cursor: pointer;
 	padding: 15px;
     border: none;
-    background: rgba(255, 230, 0, 0.938);
+    background: rgba(255,221,0);
 }
 
 .form .message
