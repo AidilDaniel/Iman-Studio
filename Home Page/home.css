@@ -28,10 +28,9 @@
 {
     display: flex;
     align-items: center;
-    padding: 20px;
-    padding-left: 80px;
-    padding-right: 30px;
+    padding: 5px;
     padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 nav
@@ -62,9 +61,22 @@ nav ul li a
     font-family: sans-serif;
 }
 
+nav ul li p a
+{
+    margin-left: 135px;
+}
+
 nav ul li a:hover
 {
     color: rgb(255,221,0);
+}
+
+nav a img
+{
+    width: 12%;
+    padding-left: 20px;
+    margin-right: 250px;
+
 }
 
 .header
