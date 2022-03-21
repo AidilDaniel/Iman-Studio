@@ -1,0 +1,166 @@
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-page
+{
+    height: 100vh;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.sub-page
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(images/bg.png);
+    background-size: cover;
+    background-position: fill;
+}
+
+.navigation-bar
+{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+nav
+{
+    flex: 1;
+    position: fixed;
+    right: 0;
+}
+
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li
+{
+    display: inline-block;
+    margin-right: 90px;
+    margin-top: 17px;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+nav ul li p a
+{
+    margin-left: 135px;
+}
+
+nav ul li a:hover
+{
+    color: rgb(255,221,0);
+}
+
+nav a img
+{
+    width: 12%;
+    padding-left: 20px;
+    margin-right: 250px;
+
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.col-1
+{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.main-heading
+{
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    font-size: 25px;
+    margin-right: 400px;
+}
+
+.form
+{
+	position: relative;
+	margin: 0 auto 100px;
+	padding: 45px;
+    text-align: center;
+}
+
+.form input
+{
+	font-family: sans-serif;
+	outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+	width: 50%;
+	margin: 0 0 15px;
+	padding: 15px;
+	font-size: 20px;
+}
+
+.form button
+{
+	font-family: sans-serif;
+	width: 150px;
+    color: rgb(0, 0, 0);
+	font-size: 20px;
+	cursor: pointer;
+	padding: 15px;
+    border: none;
+    margin-left: 450px;
+    background: rgba(255,221,0);
+}
+
+.form .message
+{
+    font-size: 25px;
+	margin: 5px 0 0;
+    color: white;
+}
+
+.form .message a
+{
+	color: orangered;
+	text-decoration: none;
+}
+
+.header
+{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding-left: 45px;
+    padding-top: 20px;
+}
+
+.defination
+{
+    text-align: left;
+    font-size: 35px;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    padding-left: 60px;
+}
