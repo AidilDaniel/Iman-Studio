@@ -87,6 +87,14 @@ nav a img
     padding-top: 20px;
 }
 
+.column 
+{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    padding-top: 15px;
+}
+  
 .defination
 {
     text-align: left;
