@@ -210,3 +210,45 @@ a:hover
       width: 85%;
       padding-top: 35px;
   }
+
+  .container {
+    position: relative;
+    width: 33.33%;
+  }
+  
+  .image {
+    float: left;
+    width: 320%;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    
+    overflow: hidden;
+    width: 90%;
+    height:0;
+    transition: .5s ease;
+  }
+
+    
+  .text {
+    color:#ffde00;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    filter: none;
+  }
+  
+  .container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    backdrop-filter: blur(10px);
+  }
+
