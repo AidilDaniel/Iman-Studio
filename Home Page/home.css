@@ -1,9 +1,10 @@
-*
-
+* 
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 .full-page
@@ -17,89 +18,189 @@
 .sub-page
 {
     width: 100%;
-    height: 100%;
+    height: 400%;
     position: absolute;
-    background: url(images/bg.png);
+    background-image: url(images/bg.png);
     background-size: cover;
-    background-position: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.navigation-bar
+.header
 {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    padding-top: 50px;
-    padding-bottom: 60px;
+
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 nav
 {
-    flex: 1;
-    position: fixed;
-    right: 0;
+    height: 80px;
+    width: 100%;
 }
 
-nav ul 
+label.logo
 {
-    display: inline-block;
-    list-style: none;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul
+{
+    float: right;
+    margin-right: 20px;
 }
 
 nav ul li
 {
     display: inline-block;
-    margin-right: 90px;
-    margin-top: 17px;
+    line-height: 80px;
+    margin: 0 5px;
 }
 
-nav ul li a
+nav ul li a 
 {
-    text-decoration: none;
-    font-size: 20px;
     color: white;
-    font-family: sans-serif;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-transform: uppercase;
 }
 
-nav ul li p a
+a:hover
 {
-    margin-left: 135px;
-}
-
-nav ul li a:hover
-{
-    color: rgb(255,221,0);
-}
-
-nav a img
-{
-    width: 12%;
-    padding-left: 20px;
-    margin-right: 250px;
+    color: #ffde00;
 
 }
 
-.header
+.checkbtn
 {
     font-size: 30px;
-    color: rgb(255, 255, 255);
-    padding-left: 45px;
-    padding-top: 20px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
 
-.column 
+#check
 {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-    padding-top: 15px;
+    display: none;
+}
+
+.row 
+{
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+@media (max-width: 952px) 
+{
+    label.logo
+    {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px)
+{
+    .checkbtn
+    {
+        display: block;
+    }
+
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/bg.png);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li
+    {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a
+    {
+        font-size: 20px;
+    }
+
+    a:hover 
+    {
+        color: #ffde00;
+    }
+
+    #check:checked ~ ul
+    {
+        left: 0;
+    }
 }
   
-.defination
+/* Create four equal columns that sits next to each other */
+.column 
 {
-    text-align: left;
-    font-size: 35px;
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+  
+.column img 
+{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+  
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) 
+{
+    .column 
+    {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) 
+{
+    .column 
+    {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+
+h3
+{
     color: white;
-    font-family: 'Kaushan Script', cursive;
-    padding-left: 60px;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 35px;
+
 }
