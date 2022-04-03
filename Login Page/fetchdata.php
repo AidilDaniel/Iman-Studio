@@ -2,18 +2,22 @@
     $db = mysqli_connect('localhost', 'root', '', 'register');
 
     if(isset($_POST['useremail'])) {
-        $uname = $_POST['useremail'];
-        $password = $_POST['userpassword'];
+        $useremail = $_POST['useremail'];
+        $userpassword = $_POST['userpassword'];
 
-        $sql = "select * from user where username='$uname' AND userpassword='$password'
-        limit 1";
+        $sql = "select * from user where useremail='$useremail' AND userpassword='$userpassword 'limit 1";
 
-        $result = mysqli_query($sql);
+        $result = mysqli_query($db, $sql);
 
-        if(mysqli_num_row($result) > 0) {
-            header("Location: ../Home Page/Home.php");
+        if (count($errors) == 0) {
+            $_SESSION['username'] = $username;
+            $_SESSION['userpassword'] = $userpassword;
+            header("Location:../Home Page/Home.php"); //redirect to home page
+        }
+
+        else {
+            array_push($errors, "Wrong combination email or password");
         }
     }
-
 
 ?>

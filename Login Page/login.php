@@ -1,6 +1,7 @@
 <!--Connect to database -->
 <?php include('server.php'); ?>
 <?php include('fetchdata.php'); ?>
+<?php include('errors.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -81,7 +82,7 @@
 
                 <div class="text"><a href="#" style="color: black;">Forgot password?</a></div>
                 <div class="button input-box">
-                  <input type="submit" value="Sumbit">
+                  <input type="submit" value="Submit">
                 </div>
 
                 <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
@@ -99,21 +100,21 @@
 
                   <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Enter your name" name = "username"value = "<?php echo $username; ?>">
+                    <input type="text" placeholder="Enter your name" name = "username"value = "<?php echo $username; ?>" required>
                   </div>
 
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your email" name = "useremail" value = "<?php echo $useremail; ?>">
+                    <input type="text" placeholder="Enter your email" name = "useremail" value = "<?php echo $useremail; ?>" required>
                   </div>
 
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" name = "userpassword" value = "<?php echo $useremail; ?>">
+                    <input type="password" placeholder="Enter your password" name = "userpassword" value = "<?php echo $useremail; ?>" required>
                   </div>
 
                   <div class="button input-box">
-                    <input type="submit" value="Sumbit" name="register">
+                    <input type="submit" value="Submit" name="register">
                   </div>
 
                   <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>

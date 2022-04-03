@@ -116,13 +116,6 @@
                     </h3>
                 </div>
             <?php endif ?>
-
-            <?php if (isset($_SESSION["username"])): ?>
-
-                <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-
-            <?php endif ?>
-
         </div>
       </div>
     </div>

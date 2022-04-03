@@ -19,7 +19,7 @@
             $userpassword = md5($userpassword); //encrypt password before storing in database (security)
             $sql = "INSERT INTO user (username, useremail, userpassword) VALUES ('$username', '$useremail', '$userpassword')";
             mysqli_query($db, $sql);
-
+            
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
             header("Location:../Home Page/Home.php"); //redirect to home page
