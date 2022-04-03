@@ -1,5 +1,6 @@
 <!--Connect to database -->
-<?php include('server.php'); ?> 
+<?php include('server.php'); ?>
+<?php include('fetchdata.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -70,12 +71,12 @@
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
-                  <input type="text" placeholder="Enter your email" required>
+                  <input type="text" placeholder="Enter your email" name="useremail" required>
                 </div>
 
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Enter your password" required>
+                  <input type="password" placeholder="Enter your password" name="userpassword" required>
                 </div>
 
                 <div class="text"><a href="#" style="color: black;">Forgot password?</a></div>

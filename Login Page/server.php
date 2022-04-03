@@ -22,7 +22,11 @@
 
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
-            header("location: ./Home Page/Home.php"); //redirect to home page
+            header("Location:../Home Page/Home.php"); //redirect to home page
+        }
+
+        else {
+            session_destroy();
         }
     }
 ?>
