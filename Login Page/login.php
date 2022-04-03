@@ -1,4 +1,6 @@
-<?php include('server.php'); ?>
+<!--Connect to database -->
+<?php include('server.php'); ?> 
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -106,7 +108,7 @@
 
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" name = "userpassword">
+                    <input type="password" placeholder="Enter your password" name = "userpassword" value = "<?php echo $useremail; ?>">
                   </div>
 
                   <div class="button input-box">
