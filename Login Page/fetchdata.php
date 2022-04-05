@@ -14,10 +14,6 @@
             $_SESSION['userpassword'] = $userpassword;
             header("Location:../Home Page/Home.php"); //redirect to home page
         }
-
-        else {
-            array_push($errors, "Wrong combination email or password");
-        }
     }
 
 ?>

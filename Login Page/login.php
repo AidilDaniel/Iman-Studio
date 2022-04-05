@@ -1,7 +1,6 @@
 <!--Connect to database -->
 <?php include('server.php'); ?>
 <?php include('fetchdata.php'); ?>
-<?php include('errors.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

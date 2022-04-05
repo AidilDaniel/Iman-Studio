@@ -1,9 +1,10 @@
 <?php include('server.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Imanstudio.com/album</title>
+    <title>Imanstudio.com/Home</title>
     
     <link rel="stylesheet" href="home.css">
 
@@ -25,7 +26,7 @@
 
             <ul>
               <li><a href="#"style="color: #ffde00;">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="/About Page/about.html">About</a></li>
               <li><a href="#">Album</a></li>
               <li><a href="#">Contact</a></li>
               <li><a href="#">Book Online</a></li>
