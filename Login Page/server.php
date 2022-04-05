@@ -21,7 +21,7 @@
             mysqli_query($db, $sql);
             
             $_SESSION['useremail'] = $useremail;
-            $_SESSION['success'] = "You are now logged in";
+            $_SESSION['userpassword'] = $userpassword;
             header("Location:../Home Page/Home.php"); //redirect to home page
         }
 
