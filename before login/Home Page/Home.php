@@ -22,7 +22,7 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><a href="#"><img src="images/logo.png"></a></label>
+            <label class="logo"><a href="Home.php"><img src="images/logo.png"></a></label>
 
             <ul>
               <li><a href="#"style="color: #ffde00;">Home</a></li>
