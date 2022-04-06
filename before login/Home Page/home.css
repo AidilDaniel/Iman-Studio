@@ -184,7 +184,7 @@ a:hover
 
   .page-content h3 {
       color: #ffde00;
-      font-size: 0px;
+      font-size: 55px;
       padding-left: 15px;
       padding-bottom: 20px;
       text-decoration: underline;
@@ -192,7 +192,7 @@ a:hover
 
   .page-content p {
       color: white;
-      font-size: 0px;
+      font-size: 25px;
       padding-left: 15px;
       padding-bottom: 50px;
   }
