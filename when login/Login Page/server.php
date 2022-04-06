@@ -17,7 +17,7 @@
         //if there are no errors, save user to database
         if (count($errors) == 0) {
             $userpassword = md5($userpassword); //encrypt password before storing in database (security)
-            $sql = "INSERT INTO user (username, useremail, userpassword) VALUES ('$username', '$useremail', '$userpassword')";
+            $sql = "INSERT INTO user (username, useremail, userpassword, userroles) VALUES ('$username', '$useremail', '$userpassword', 'user')";
             mysqli_query($db, $sql);
             
             $_SESSION['useremail'] = $useremail;
