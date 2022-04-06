@@ -178,13 +178,13 @@ a:hover
 
   .page-content h1 {
       color: white;
-      font-size: 1px;
+      font-size: 50px;
       padding-left: 15px;
   }
 
   .page-content h3 {
       color: #ffde00;
-      font-size: 0px;
+      font-size: 30px;
       padding-left: 15px;
       padding-bottom: 20px;
       text-decoration: underline;
@@ -192,7 +192,7 @@ a:hover
 
   .page-content p {
       color: white;
-      font-size: 0px;
+      font-size: 120%;
       padding-left: 15px;
       padding-bottom: 50px;
   }
@@ -200,7 +200,7 @@ a:hover
   .client h1 {
       color: white;
       padding-left: 15px;
-      font-size: 55px;
+      font-size: 50px;
   }
 
   .center {
