@@ -1,0 +1,302 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.full-page
+{
+    height: 100vh;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.sub-page
+{
+    width: 100%;
+    height: 400%;
+    position: absolute;
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header
+{
+
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+nav
+{
+    height: 80px;
+    width: 100%;
+}
+
+label.logo
+{
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul
+{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a 
+{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+}
+
+a:hover
+{
+    color: #ffde00;
+
+}
+
+.checkbtn
+{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check
+{
+    display: none;
+}
+
+.row 
+{
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+@media (max-width: 952px) 
+{
+    label.logo
+    {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px)
+{
+    .checkbtn
+    {
+        display: block;
+    }
+
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/bg.png);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li
+    {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a
+    {
+        font-size: 20px;
+    }
+
+    a:hover 
+    {
+        color: #ffde00;
+    }
+
+    #check:checked ~ ul
+    {
+        left: 0;
+    }
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.col-1
+{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.main-heading
+{
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    font-size: 25px;
+    margin-right: 400px;
+}
+
+form{
+    width: 640px;
+    margin: 5px 65px;
+    max-width: 97%;
+    border-radius: 4px;
+    padding: 55px 30px;
+  }
+
+  .main-heading
+  {
+      color: rgb(255, 255, 255);
+      padding-bottom: 20px;
+      font-size: 25px;
+      margin-right: 400px;
+  }
+  
+  form .half{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  form .half .item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+    color: white;
+    font-size: 30px;
+  }
+  
+  form label{
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+  
+  form .half .item input{
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    font-size: 17px;
+  }
+  
+  form .full{
+    margin-bottom: 24px;
+    color:white;
+  }
+  
+  form .full textarea{
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    font-size: 17px;
+  }
+  
+  form .action{
+    margin-bottom: 32px;
+  }
+  
+  form .action input{
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-left: 397px;
+  }
+  
+  form .action input[type="submit"]{
+    background: rgba(255,221,0);
+    color: rgb(0, 0, 0);
+  }
+
+  form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover{
+    background: rgba(255,255,255,0.075);
+  }
+  
+  @media (max-width: 480px){
+    form .half{
+      flex-direction: column;
+    }
+    form .half .item{
+      width: 100%;
+    }
+    form .action{
+      display: flex;
+      flex-direction: column;
+    }
+    form .action input{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+}  
+
+.header
+{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding-left: 45px;
+    padding-top: 5px;
+}
+
+.defination
+{
+    text-align: left;
+    font-size: 35px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 60px;
+}

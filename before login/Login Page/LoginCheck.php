@@ -1,6 +1,8 @@
 <?php
     require 'server.php';
 
+    $errors = array();
+
     if(isset($_POST['useremail'])) {
         $useremail = $_POST['useremail'];
         $userpassword = $_POST['userpassword'];
@@ -24,14 +26,14 @@
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
                     $_SESSION['userroles'] = "worker";
-                    header("Location:../Album Page/album.php"); //redirect to Worker page
+                    header("#"); //redirect to Worker page
                 }
     
                 else if ($row['userroles'] == "manager" ) {
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
                     $_SESSION['userroles'] = "manager";
-                    header("Location:../About Page/about.php"); //redirect to Manager page
+                    header("#"); //redirect to Manager page
                 }
     
                 else {
