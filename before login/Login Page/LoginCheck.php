@@ -1,5 +1,5 @@
 <?php
-    $db = mysqli_connect('localhost', 'root', '', 'register');
+    require 'server.php';
 
     if(isset($_POST['useremail'])) {
         $useremail = $_POST['useremail'];
