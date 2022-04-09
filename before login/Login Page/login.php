@@ -1,6 +1,5 @@
 <!--Connect to database -->
 <?php include('server.php'); ?>
-<?php include('fetchdata.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -66,9 +65,12 @@
 
         <div class="form-content">
           <div class="login-form">
+
             <div class="title">Login</div>
-            <form action="#" method="post" >
+            <form action="LoginCheck.php" method="post" >
+              
               <div class="input-boxes">
+
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
                   <input type="email" placeholder="Enter your email" name="useremail" required>
@@ -85,7 +87,6 @@
                 </div>
 
                 <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
-
               </div>
             </form>
           </div>
@@ -93,30 +94,30 @@
           <div class="signup-form">
             <div class="title">Signup</div>
 
-              <form action="#" method="post"> 
+            <form action="RegisterData.php" method="post"> 
 
-                <div class="input-boxes">
+              <div class="input-boxes">
 
-                  <div class="input-box">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Enter your name" name = "username"value = "<?php echo $username; ?>" required>
-                  </div>
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Enter your name" name = "username"value = "<?php echo $username; ?>" required>
+                </div>
 
-                  <div class="input-box">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Enter your email" name = "useremail" value = "<?php echo $useremail; ?>" required>
-                  </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" placeholder="Enter your email" name = "useremail" value = "<?php echo $useremail; ?>" required>
+                </div>
 
-                  <div class="input-box">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" name = "userpassword" value = "<?php echo $useremail; ?>" required>
-                  </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Enter your password" name = "userpassword" value = "<?php echo $useremail; ?>" required>
+                </div>
 
-                  <div class="button input-box">
-                    <input type="submit" value="Submit" name="register">
-                  </div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit" name="register">
+                </div>
 
-                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
 
                 </div>
               </form>
