@@ -19,21 +19,21 @@
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
                     $_SESSION['userroles'] = "user";
-                    header("Location:../Home Page/Home.php"); //redirect to Customer page
+                    header("Location:../After Login/Home Page/Home.php"); //redirect to Customer page
                 }
     
                 else if ($row['userroles'] == "worker" ) {
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
                     $_SESSION['userroles'] = "worker";
-                    header("#"); //redirect to Worker page
+                    header("Location:../Album Page/Album.php"); //redirect to Worker page
                 }
     
                 else if ($row['userroles'] == "manager" ) {
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
                     $_SESSION['userroles'] = "manager";
-                    header("#"); //redirect to Manager page
+                    header("Location:../About Page/about.php"); //redirect to Manager page
                 }
     
                 else {
