@@ -1,6 +1,9 @@
 <!--Connect to database -->
 <?php include('server.php'); ?>
 
+<!--Transfer data to database-->
+<?php include('RegisterData.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -94,13 +97,13 @@
           <div class="signup-form">
             <div class="title">Signup</div>
 
-            <form action="RegisterData.php" method="post"> 
+            <form action="#" method="post"> 
 
               <div class="input-boxes">
 
                 <div class="input-box">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Enter your name" name = "username"value = "<?php echo $username; ?>" required>
+                  <input type="text" placeholder="Enter your name" name = "username" value = "<?php echo $username; ?>" required>
                 </div>
 
                 <div class="input-box">
