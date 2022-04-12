@@ -32,21 +32,89 @@
           </nav>
         </div>
 
-        <div class="sidenav">
+        <div class=navigation>
+            <ul>
+                
+              <li>
+                <a class="profile" href="#" style="color: #ffde00;">
+                    <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                    <span class="title">Profile</span>
+                </a>
+              </li>
 
-          <a href="##">Profile</a>
-          <a href="##">Reservation</a>
-          <a href="##">My Booking</a>
+              <li>
+                <a class="reservation" href="#">
+                    <span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>
+                    <span class="title">Reservation</span>
+                </a>
+              </li>
 
+              <li>
+                  <a class="booking" href="#">
+                    <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></i></span>
+                    <span class="title">Booking</span>
+                  </a>
+              </li>
+
+            </ul>
         </div>
 
         <div class="main">
-          <h2>Sidebar </h2>
-          <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
-          <p>This sidebar is of full height (100%) and always shown.</p>
-          <p>Some random text..</p>
+          <div class="container">
+            <form action="#">
+              <div class="title">Profile</div>
+                <div class="user-details">
+
+                  <div class="input-box"
+                    <span class="details">Username</span>
+                    <input type="text" placeholder="Enter your username" required>
+                  </div>
+                  <div class="input-box"
+                    <span class="details">Name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box"
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box"
+                    <span class="details">Phone No</span>
+                    <input type="text" placeholder="Enter your phone number" required>
+                  </div>
+                </div>
+
+                <div class="change-pass">
+                  <div class="title-pass">Change Password</div>
+                  <div class="pass-details">
+
+                    <div class="pass-box">
+                      <span class="oldpass">Old Password</span>
+                      <input type="password" id="oldpass" required>
+                    </div>
+
+                    <div class="pass-box">
+                      <span class="newpass">New Password</span>
+                      <input type="password" id="newpass" class="newpass" required>
+                    </div>
+
+                    <div class="pass-box">
+                      <span class="confirmpass">Confirm New Password</span>
+                      <input type="password" id="confirmpass" class="confirmpass" required>
+                    </div>
+
+                  </div>
+                </div>
+
+                <button class="btn-update"><span>Update</span></button>
+
+              </div>
+
+            </form> 
+
+          </div>
+
         </div>
       </div>
     </div>
-  </body>
+  </body> 
 </html>
