@@ -264,7 +264,7 @@ form .change-pass .pass-box {
 
 .change-pass .pass-box input{
     height: 35px;
-    width: 0%;
+    width: 100%;
 }
 
 .change-pass .pass-box .pass {
