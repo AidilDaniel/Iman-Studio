@@ -230,6 +230,7 @@ a:hover
     background: linear-gradient(135deg, #d1ea74, #1e1e34);
 }
 
+/*input box for user details*/
 form .user-details .input-box {
     margin: 20px 0 12px 0;
     width: calc(100% / 2 - 20px);
@@ -251,7 +252,8 @@ form .user-details .input-box {
     margin-bottom: 5px;
 }
 
-form .change-pass .pass-box {
+/*change password form*/
+form .pass-details .pass-box {
     margin: 20px 0 12px 0;
     width: calc(100% / 2 - 20px);
 }
@@ -262,16 +264,17 @@ form .change-pass .pass-box {
     justify-content: space-between;
 }
 
-.change-pass .pass-box input{
+.pass-details .pass-box input {
     height: 35px;
     width: 100%;
 }
 
-.change-pass .pass-box .pass {
+.pass-details .pass-box .pass {
     font-weight: 500;
     margin-bottom: 5px;
 }
 
+/*button*/
 .btn-update {
     border-radius: 4px;
     color: white;
