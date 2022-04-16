@@ -84,25 +84,28 @@
                 </div>
 
                 <div class="change-pass">
+
                   <div class="title-pass">Change Password</div>
+
                   <div class="pass-details">
 
-                    <div class="pass-box">
-                      <span class="oldpass">Old Password</span>
-                      <input type="password" id="oldpass" required>
+                    <div class="pass-box"
+                      <span class="pass">Old Password</span>
+                      <input type="password" required>
                     </div>
 
-                    <div class="pass-box">
-                      <span class="newpass">New Password</span>
-                      <input type="password" id="newpass" class="newpass" required>
+                    <div class="pass-box"
+                      <span class="pass">New Password</span>
+                      <input type="password" required>
                     </div>
 
-                    <div class="pass-box">
-                      <span class="confirmpass">Confirm New Password</span>
-                      <input type="password" id="confirmpass" class="confirmpass" required>
+                    <div class="pass-box"
+                      <span class="pass">Confirm Password</span>
+                      <input type="password" required>
                     </div>
 
                   </div>
+
                 </div>
 
                 <button class="btn-update"><span>Update</span></button>
