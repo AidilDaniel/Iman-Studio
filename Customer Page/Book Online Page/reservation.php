@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Imanstudio.com/Book</title>
     
-    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="reservation.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -59,50 +59,52 @@
             </ul>
         </div>
 
-        <div class="main">
-          <div class="container">
-            <form action="#">
-              <div class="title">RESERVATION</div>
-                <div class="reserve-details">  
+      <div class="main">
+        <div class="container">
+          <form action="#">
+            <div class="title">RESERVATION</div>
+            <div class="reserve-details">  
 
-                  <div class="details">
-                    <label>Email</label>
-                    <input type="email" placeholder="enter your email" class="input" required>
-                  </div>
-
-                  <div class="details">
-                    <label>Address</label>
-                    <textarea name="address" placeholder="Enter your address" class="textarea" required></textarea>
-                  </div>
-
-                  <div class="details">
-                    <label>Date</label>
-                    <input type="date">
-                  </div>
-
-                  <div class="details">
-                    <label>Time</label>
-                    <input type="time">
-                  </div>
-
-                  <div class="details">
-                    <label>Package</label>
-                    <select name="select" id="#">
-                      <option value="1">Package A</option>
-                      <option value="2">Package B</option>
-                      <option value="3">Package C</option>
-                    </select>
-                  </div>
-
-                  <button class="btn"><span>Submit</span></button>
-
-                </div>
-
+              <div class="input-box"
+                <span class="details"></span>
+                <input type="date" required>
               </div>
 
-            </form> 
+              <div class="input-box"
+                <span class="details"></span>
+                <input type="time" required>
+              </div>
 
-          </div>
+              <div class="input-box"
+                <span class="details"></span>
+                <input type="text" placeholder="Phone Number" required>
+              </div>
+
+              <div class="co-box">
+                <span class="cbo-details"></span>
+                <select name="select" id="#">
+                  <option value="1">Package A</option>
+                  <option value="2">Package B</option>
+                  <option value="3">Package C</option>
+                </select>
+              </div>
+
+              <div class="input-box"
+                <span class="details"></span>
+                <textarea rows="5" cols="38" placeholder="Add Info" required></textarea>
+              </div>
+
+              <div class="btn-submit"
+                <span class="btn-details"></span>
+                <button class="btn"><span>Submit</span></button>
+              </div>
+
+                
+
+            </div>
+
+          </form> 
+
         </div>
       </div>
     </div>

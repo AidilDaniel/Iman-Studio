@@ -147,11 +147,11 @@ a:hover
 .navigation 
 {
     position: absolute;
+    background-image: url(images/bg.png);
     z-index: 1;
     overflow-x: hidden;
     width: 200px;
     height: 100%;
-    background: #373737;
     transition: 0.5s;
 }
 
@@ -161,6 +161,7 @@ a:hover
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
 }
 
 .navigation ul li 
@@ -172,13 +173,18 @@ a:hover
 
 .navigation ul li a 
 {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 30px;
+    padding-bottom: 15px;
     position: relative;
     display: block;
     text-decoration: none;
     color: #ffff;
     font-size: 20px;
+}
+
+.navigation a:hover {
+    background-color: #323232;
 }
 
 /* Main content */
@@ -214,7 +220,26 @@ a:hover
 }
 
 /*reserve info*/
+form .reserve-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
 
+.container form .reserve-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reserve-details .input-box input{
+    height: 35px;
+    width: 100%;
+}
+
+.reserve-details .input-box .details {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
 
 
 
