@@ -241,10 +241,100 @@ form .reserve-details .input-box {
     margin-bottom: 5px;
 }
 
+.container .title {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+}
 
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #d1ea74, #1e1e34);
+}
+
+.container .title-pass {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-top: 15px;
+}
+
+.container .title-pass::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #d1ea74, #1e1e34);
+}
+
+form .reserve-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.container form .reserve-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reserve-details .input-box input{
+    height: 35px;
+    width: 100%;
+}
+
+.reserve-details .input-box .details {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
 
 /*button*/
 
+.btn{
+    border-radius: 4px;
+    color: white;
+    background: linear-gradient(135deg, #d1ea74, #1e1e34);
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+  
+.btn:hover span {
+    padding-right: 25px;
+}
+  
+  .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
 
 a.profile:hover, a.profile:active {
     color: #ffde00;
