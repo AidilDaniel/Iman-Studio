@@ -13,7 +13,7 @@
     <div class="full-page">
       <div class="sub-page">
 
-      <div class="navigation-bar">
+        <div class="navigation-bar">
           <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -105,8 +105,44 @@
 
           </form> 
 
+        <div class="main">
+          <div class="container">
+            <form action="#">
+              <div class="title">RESERVATION</div>
+              <div>
+                  <div>
+                    <p>Email</p>
+                    <input type="email" placeholder="Email">
+                  </div>
+                  <div>
+                    <p>Address</p>
+                    <input type="text" placeholder="Address">
+                  </div>
+                  <div>
+                    <p>Date</p>
+                    <input type="date">
+                  </div>
+                  <div>
+                    <p>Time</p>
+                    <input type="time">
+                  </div>
+                  <div>
+                    <p>Type Package</p>
+                    <select name="select" id="#">
+                      <option value="1"></option>
+                      <option value="2">Package A</option>
+                      <option value="3">Package B</option>
+                      <option value="4">Package C</option>
+                    </select>
+                  </div>
+                  <button>Submit</button>
+                </form>
+              </div>
+              </div>
+            </form>  
+          </div>
         </div>
-      </div>
+      </div>  
     </div>
   </body>
 </html>
