@@ -62,54 +62,22 @@
         <div class="main">
           <div class="container">
             <form action="#">
-              <div class="title">RESERVATION</div>
+              <div class="title">HISTORY BOOKING</div>
               <div class="reserve-details">  
-
-                <div class="input-box"
-                  <span class="details"></span>
-                  <input type="date" required>
-                </div>
-
-                <div class="input-box"
-                  <span class="details"></span>
-                  <input type="time" required>
-                </div>
-
-                <div class="input-box"
-                  <span class="details"></span>
-                  <input type="text" placeholder="Phone Number" required>
-                </div>
-
-                <div class="input-box"
-                  <span class="details"></span>
-                    <select name="people" id="people" required>
-                        <option value="">Choose Package</option>
-                        <option value="1">Package A</option>
-                        <option value="2">Package B</option>
-                        <option value="3">Package C</option>
-                    </select>
-                    <!-- <---this is the select option--->
-                </div>
-
-                <div class="input-box"
-                  <span class="details"></span>
-                  <textarea rows="8" cols="38" placeholder="Address" required></textarea>
-                </div>
-
-                <div class="input-box"
-                  <span class="details"></span>
-                  <textarea rows="8" cols="38" placeholder="Add Info" required></textarea>
-                </div>
-
-                <div class="input-box"
-                  <span class="details"></span>
-                  <span class="details"></span>
-                </div>
-
-                <div class="btn-submit"
-                  <span class="btn-details"></span>
-                  <button class="btn"><span>Submit</span></button>
-                </div>
+                  
+              <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date Book</th>
+                            <th>Type Package</th>
+                            <th>Date Event</th>
+                            <th>Time Event</th>
+							<th>Phone Number</th>
+							<th></th>
+                        </tr>
+                    </thead>
+                </table>
               </div>
               </div>
             </form>  
