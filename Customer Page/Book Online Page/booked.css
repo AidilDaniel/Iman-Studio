@@ -221,95 +221,7 @@ a:hover
     background: linear-gradient(135deg, #d1ea74, #1e1e34);
 }
 
-/*reserve info*/
-form .reserve-details .input-box {
-    margin: 20px 0 12px 0;
-    width: calc(100% / 2 - 20px);
-}
-
-.container form .reserve-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.reserve-details .input-box input{
-    height: 35px;
-    width: 100%;
-}
-
-.reserve-details .input-box .details {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.container .title {
-    font-size: 30px;
-    font-weight: 600;
-    position: relative;
-}
-
-.container .title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background: linear-gradient(135deg, #d1ea74, #1e1e34);
-}
-
-.container .title-pass {
-    font-size: 30px;
-    font-weight: 600;
-    position: relative;
-    padding-top: 15px;
-}
-
-.container .title-pass::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background: linear-gradient(135deg, #d1ea74, #1e1e34);
-}
-
-.container div select{
-    width: 100%;
-    height: 35px;
-    background: none;
-    border: 1px solid #0a0a0a;
-    color: rgb(0, 0, 0);
-    outline: none;
-    padding: 0px 0 3px 10px;
-    margin-top: 0px;
-}
-
-form .reserve-details .input-box {
-    margin: 20px 0 12px 0;
-    width: calc(100% / 2 - 20px);
-}
-
-.container form .reserve-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.reserve-details .input-box input{
-    height: 35px;
-    width: 100%;
-}
-
-.reserve-details .input-box .details {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
 /*button*/
-
 .btn{
     border-radius: 10px;
     color: rgb(233, 220, 44);
@@ -322,7 +234,6 @@ form .reserve-details .input-box {
     height: 50px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
 }
 
 .btn span {
@@ -350,40 +261,126 @@ form .reserve-details .input-box {
     right: 0;
 }
 
-.table-responsive table, td, th {
-    border: 1px solid black;
+/*set table main*/
+.main .table-responsive table, td, th {
+    border: 1px solid rgb(0, 0, 0);
   }
   
-.table-responsive  table {
-    border-collapse: collapse;
+.main .table-responsive  table {
+    border-collapse:inherit;
     width: 850px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: auto; 
     margin-right: auto;
   }
   
-.table-responsive th {
+.main .table-responsive th {
     height: 45px;
     background-color: #ffde00;
   }
 
-.table-responsive td {
+.main .table-responsive td {
     height: 40px;
+    padding-left: 5px;
+    background-color: rgb(236, 233, 233);
   }
 
-  .table-responsive td i {
-    padding-left: 25px;
+.main .table-responsive td i {
+    padding-left: 27px;
+  }
+ 
+  /* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 10px;
+    background-color: #eee126;
+    margin: 8px 950px;
   }
 
-a.profile:hover, a.profile:active {
-    color: #ffde00;
-}
+button:hover {
+    opacity: 0.8;
+  }
 
-a.reservation:hover, a.reservation {
-    color: #ffde00;
-}
-
-a.booking:hover, a.booking {
-    color: #ffde00;
-}
+.container {
+    padding: 16px;
+  }
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position:fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-y: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
     
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+span.psw {
+       display: block;
+       float: none;
+    }
+.cancelbtn {
+       width: 100%;
+    }
+  }
+
+/*set table modal*/
+.modal .table-modal table, td, th {
+      border: 1px black;
+  }
+  
+.table-modal  table {
+    border-collapse: collapse;
+    width: 500px;
+    margin-top: 30px;
+    padding-left: 15px;
+  }
+  
+.table-modal th {
+    height: 45px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+.table-modal td {
+    height: 40px;
+    padding-left: 15px;
+    font-size: 15px;
+  }
