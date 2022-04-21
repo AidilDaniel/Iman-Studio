@@ -47,7 +47,7 @@
                         <br>
                         <br>38, Jalan Dato Dagang 41, Taman Sri Sentosa,
                         <br>41200, Klang, Selangor
-                        <br>Tel : 011-2380 3887 (Aidil)
+                        <br>Tel : 011-2380 3887 (Daniel)
                     </p>
                 </div>
 
@@ -55,7 +55,7 @@
                     <div class="form">
                         <form class="message-form">
                             <h1 class="main-heading">Leave us a message</h1>
-				            <textarea name="message" rows = "20" cols = "80"></textarea>
+				            <textarea name="message" rows = "15" cols = "68"></textarea>
 				            <button>Submit</button>
 				        </form>
 			        </div>

@@ -293,9 +293,11 @@ a:hover
 .cancelbtn {
     width: auto;
     padding: 10px 10px;
-    background-color: #eee126;
-    margin: 8px 950px;
-  }
+    background-color: #000000;
+    margin: 8px 420px;
+    cursor: pointer;
+    color: white;
+}
 
 button:hover {
     opacity: 0.8;
@@ -323,6 +325,7 @@ span.psw {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
+    overflow-x: hidden;
   }
   
   /* Modal Content/Box */
@@ -330,7 +333,7 @@ span.psw {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 45%; /* Could be more or less, depending on screen size */
   }
   
   /* Add Zoom Animation */
@@ -366,21 +369,23 @@ span.psw {
   }
   
 .table-modal  table {
-    border-collapse: collapse;
+    border-collapse:inherit;
+    background-color: rgb(255, 255, 255);
     width: 500px;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 15px;
   }
   
 .table-modal th {
     height: 45px;
-    text-align: left;
+    text-align: right;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
   }
 
 .table-modal td {
+    text-align: center;
     height: 40px;
-    padding-left: 15px;
-    font-size: 15px;
+    padding-left: 20px;
+    font-size: 20px;
   }
