@@ -29,10 +29,9 @@
 
 .header
 {
-
-    font-size: 30px;
+    font-size: 20px;
     color: white;
-    padding-left: 20px;
+    padding: 15px;
     padding-top: 20px;
 }
 
@@ -160,32 +159,33 @@ a:hover
 
 .row
 {
+    margin-top: 50px;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 
 .col-1
 {
     flex-basis: 50%;
-    min-width: 300px;
+    min-width: 500px;
 }
 
 .main-heading
 {
     color: rgb(255, 255, 255);
+    padding-top: 50px;
     padding-bottom: 20px;
-    font-size: 25px;
-    margin-right: 400px;
+    font-size: 20px;
+    margin-right: 300px;
 }
 
 .form
 {
 	position: relative;
-	margin: 0 auto 100px;
-	padding: 45px;
+	margin: 0 auto 90px;
+	padding: 65px;
+    margin-top: -114px;
     text-align: center;
 }
 
@@ -195,7 +195,7 @@ a:hover
 	outline: none;
     border: none;
     border-bottom: 1px solid black;
-	width: 50%;
+	width: 40%;
 	margin: 0 0 15px;
 	padding: 15px;
 	font-size: 20px;
@@ -204,13 +204,15 @@ a:hover
 .form button
 {
 	font-family: sans-serif;
-	width: 150px;
+	width: 110px;
     color: rgb(0, 0, 0);
-	font-size: 20px;
+	font-size: 17px;
+    font-weight: bold;
 	cursor: pointer;
-	padding: 15px;
+	padding: 10px;
     border: none;
-    margin-left: 450px;
+    margin-left:370px;
+    margin-top: 10px;
     background: rgba(255,221,0);
 }
 
@@ -227,19 +229,11 @@ a:hover
 	text-decoration: none;
 }
 
-.header
-{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    padding-left: 45px;
-    padding-top: 20px;
-}
-
 .defination
 {
     text-align: left;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
     font-family: 'Kaushan Script', cursive;
-    padding-left: 60px;
+    padding-left: 15px;
 }

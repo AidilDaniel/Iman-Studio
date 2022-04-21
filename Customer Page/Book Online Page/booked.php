@@ -158,7 +158,7 @@
               </div>
                 <br>
                 <p><button type="button" onclick="document.getElementById('id01').style.display='none'"
-                   class="cancelbtn">Cancel</button></p>
+                   class="cancelbtn">Close</button></p>
             </div> 
                   
             </div>
