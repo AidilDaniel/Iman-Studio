@@ -67,19 +67,19 @@
 
                   <div class="input-box"
                     <span class="details">Username</span>
-                    <input type="text" placeholder="Enter your username" required>
+                    <input type="text" name="username" placeholder="Enter your username" required>
                   </div>
                   <div class="input-box"
                     <span class="details">Name</span>
-                    <input type="text" placeholder="Enter your name" required>
+                    <input type="text" name="name_user" placeholder="Enter your name" required>
                   </div>
                   <div class="input-box"
                     <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your email" required>
+                    <input type="text" name="useremail" placeholder="Enter your email" required>
                   </div>
                   <div class="input-box"
                     <span class="details">Phone No</span>
-                    <input type="text" placeholder="Enter your phone number" required>
+                    <input type="text" name="phone_number" placeholder="Enter your phone number" required>
                   </div>
                 </div>
 
@@ -91,24 +91,24 @@
 
                     <div class="pass-box"
                       <span class="pass">Old Password</span>
-                      <input type="password" required>
+                      <input type="password" name="userpassword" required>
                     </div>
 
                     <div class="pass-box"
                       <span class="pass">New Password</span>
-                      <input type="password" required>
+                      <input type="password" name="new_password" required>
                     </div>
 
                     <div class="pass-box"
                       <span class="pass">Confirm Password</span>
-                      <input type="password" required>
+                      <input type="password" name="confirm_password" required>
                     </div>
 
                   </div>
 
                 </div>
 
-                <button class="btn-update"><span>Update</span></button>
+                <button class="btn-update" name="update"><span>Update</span></button>
 
               </div>
 

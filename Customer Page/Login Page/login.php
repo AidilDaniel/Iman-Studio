@@ -103,7 +103,7 @@
 
                 <div class="input-box">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Enter your name" name = "username" value = "<?php echo $username; ?>" required>
+                  <input type="text" placeholder="Enter your username" name = "username" value = "<?php echo $username; ?>" required>
                 </div>
 
                 <div class="input-box">
