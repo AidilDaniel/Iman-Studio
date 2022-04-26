@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include "server.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -61,44 +65,44 @@
 
         <div class="main">
           <div class="container">
-            <form action="#">
+            <form action="server.php" method="post" >
               <div class="title">RESERVATION</div>
               <div class="reserve-details">  
 
                 <div class="input-box"
                   <span class="details"></span>
-                  <input type="date" required>
+                  <input type="date" name="booking_date" required>
                 </div>
 
                 <div class="input-box"
                   <span class="details"></span>
-                  <input type="time" required>
+                  <input type="time" name="booking_time" required>
                 </div>
 
                 <div class="input-box"
                   <span class="details"></span>
-                  <input type="text" placeholder="Phone Number" required>
+                  <input type="text" placeholder="Phone Number" name="phone_number" required>
                 </div>
 
                 <div class="input-box"
                   <span class="details"></span>
-                    <select name="people" id="people" required>
+                    <select name="booking_package" id="booking_page"  required>
                         <option value="">Choose Package</option>
-                        <option value="1">Package A</option>
-                        <option value="2">Package B</option>
-                        <option value="3">Package C</option>
+                        <option value="Package A">Package A</option>
+                        <option value="Package B">Package B</option>
+                        <option value="Package C">Package C</option>
                     </select>
-                    <!-- <---this is the select option--->
+                    <!--this is the select option-->
                 </div>
 
                 <div class="input-box"
                   <span class="details"></span>
-                  <textarea rows="8" cols="38" placeholder="Address" required></textarea>
+                  <textarea rows="8" cols="38" placeholder="Address" name="booking_address" required></textarea>
                 </div>
 
                 <div class="input-box"
                   <span class="details"></span>
-                  <textarea rows="8" cols="38" placeholder="Add Info" required></textarea>
+                  <textarea rows="8" cols="38" placeholder="Add Info" name="booking_info" required></textarea>
                 </div>
 
                 <div class="input-box"
@@ -106,9 +110,9 @@
                   <span class="details"></span>
                 </div>
 
-                <div class="btn-submit"
+                <div class="btn-submit"   
                   <span class="btn-details"></span>
-                  <button class="btn"><span>Submit</span></button>
+                  <button class="btn" name="submit"><span>Submit</span></button>  <!--Button Submit-->
                 </div>
               </div>
               </div>
