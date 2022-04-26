@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include "Server.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,10 +57,10 @@
 
                 <div class="col-1">
                     <div class="form">
-                        <form class="message-form">
+                        <form class="message-form" action="Server.php" method="post">
                             <h1 class="main-heading">Leave us a message</h1>
-				            <textarea name="message" rows = "15" cols = "68"></textarea>
-				            <button>Submit</button>
+				            <textarea name="contact_message" rows = "15" cols = "68" placeholder="Leave a message" required></textarea>
+				            <button class="btn" name="submit">Submit</button>
 				        </form>
 			        </div>
                 </div>
