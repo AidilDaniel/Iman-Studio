@@ -71,6 +71,12 @@ nav ul li a
     text-transform: uppercase;
 }
 
+a
+{
+    color: #000000;
+
+}
+
 a:hover
 {
     color: #ffde00;
@@ -235,7 +241,7 @@ a:hover
 
     
   .text {
-    color:#ffde00;
+    color:#ffdd00;
     font-size: 20px;
     font-weight: bold;
     position: absolute;

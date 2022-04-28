@@ -20,15 +20,15 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><a href="#"><img src="images/logo.png"></a></label>
+            <label class="logo"><a href="../Home Page/Home.php"><img src="images/logo.png"></a></label>
 
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#" style="color: #ffde00;">Album</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Book Online</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a href="../Home Page/Home.php">Home</a></li>
+              <li><a href="../About Page/about.php">About</a></li>
+              <li><a href="../Album Page/album.php" style="color: #ffde00;">Album</a></li>
+              <li><a href="../Contact Page/Contact.php">Contact</a></li>
+              <li><a href="../Book Online Page/book.php">Book Online</a></li>
+              <li><a href="../Login Page/login.php">Login</a></li>
             </ul>
           </nav>
         </div>
