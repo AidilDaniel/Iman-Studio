@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include "Server.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,15 +24,15 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><a href="#"><img src="images/logo.png"></a></label>
+            <label class="logo"><a href="../Home Page/Home.php"><img src="images/logo.png"></a></label>
 
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Album</a></li>
-              <li><a href="#"style="color: #ffde00;">Contact</a></li>
-              <li><a href="#" >Book Online</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a href="../Home Page/Home.php">Home</a></li>
+              <li><a href="../About Page/about.php">About</a></li>
+              <li><a href="../Album Page/album.php">Album</a></li>
+              <li><a href="../Contact Page/Contact.php"style="color: #ffde00;">Contact</a></li>
+              <li><a href="../Book Online Page/book.php" >Book Online</a></li>
+              <li><a href="../Login Page/login.php">Login</a></li>
             </ul>
           </nav>
         </div>
@@ -53,10 +57,10 @@
 
                 <div class="col-1">
                     <div class="form">
-                        <form class="message-form">
+                        <form class="message-form" action="Server.php" method="post">
                             <h1 class="main-heading">Leave us a message</h1>
-				            <textarea name="message" rows = "15" cols = "68"></textarea>
-				            <button>Submit</button>
+				            <textarea name="contact_message" rows = "15" cols = "68" placeholder="Leave a message" required></textarea>
+				            <button class="btn" name="submit">Submit</button>
 				        </form>
 			        </div>
                 </div>

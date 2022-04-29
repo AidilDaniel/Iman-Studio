@@ -17,7 +17,7 @@
         {
             echo ' 
             <script type="text/javascript"> alert("Data Saved");
-                window.location.href = "reservation.php" 
+                window.location.href = "booked.php" 
             </script> ';
         } 
         else 
