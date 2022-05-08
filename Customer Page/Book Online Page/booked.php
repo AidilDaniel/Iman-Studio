@@ -1,3 +1,12 @@
+<?php 
+  $db = mysqli_connect("localhost", "root", "", "register");  //database connection
+
+  $query = "select * from booking";
+  $db = mysqli_query($db, $query);
+  $num = mysqli_num_rows($db); //check in database any data have or no
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,40 +77,30 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Date Book</th>
-                            <th>Type Package</th>
-                            <th>Date Event</th>
-                            <th>Time Event</th>
-							              <th>Phone Number</th>
-							              <th>           </th>
+                            <th> Date </th>
+                            <th> Time </th>
+                            <th> Phone Number </th>
+                            <th> Package </th>
+							              <th> Address </th>
+                            <th> Info </th>
                         </tr>
-                        <tr>
-                            <td>12/8/2021</td>
-                            <td>Package A</td>
-                            <td>12/12/2021</td>
-                            <td>10:00 AM</td>
-							              <td>0126960322</td>
-							              <td><i onclick="document.getElementById('id01').style.display='block'" style="width:auto;"
-                            class="fa fa-chevron-circle-down"></i></td>
-                        </tr>
-                        <tr>
-                            <td>12/7/2018</td>
-                            <td>Package C</td>
-                            <td>12/9/2018</td>
-                            <td>10:00 AM</td>
-							              <td>0126960322</td>
-							              <td><i onclick="document.getElementById('id01').style.display='block'" style="width:auto;"
-                             class="fa fa-chevron-circle-down"></i></td>
-                        </tr>
-                        <tr>
-                            <td>2/10/2019</td>
-                            <td>Package B</td>
-                            <td>1/11/2019</td>
-                            <td>10:00 PM</td>
-							              <td>0126960322</td>
-							              <td><i onclick="document.getElementById('id01').style.display='block'" style="width:auto;" 
-                            class="fa fa-chevron-circle-down"></i></td>
-                        </tr>
+                        <?php
+                          if ($num>0) {
+                            while($data = mysqli_fetch_assoc($db)){
+                              echo "
+                                  <tr>
+                                  <td>".$data['booking_date']."</td>
+                                  <td>".$data['booking_time']."</td>
+                                  <td>".$data['phone_number']."</td>
+                                  <td>".$data['booking_package']."</td>
+                                  <td>".$data['booking_address']."</td>
+                                  <td>".$data['booking_info']."</td>
+                                  </tr>
+                              ";
+                            }
+                          }
+                        ?>
+                        
                     </thead>
                 </table>
               </div>
@@ -122,37 +121,30 @@
 
                   <thead>
                     <tr>
-                      <th>Date Book</th>
+                      <th>Date</th>
                       <td>--/--/-- </td>
                     </tr>
                     <tr>
-                      <th>Name</th>
+                      <th>Time</th>
                       <td>asdfghj </td>
                     </tr>
                     <tr>
-                      <th>Address</th>
+                      <th>Phone Number</th>
                       <td>dggg </td>
                     </tr>
                     <tr>
-                      <th>Email</th>
+                      <th>Package</th>
                       <td>dggg@gmail.com </td>
                     </tr>
                     <tr>
-                      <th>Date Event</th>
+                      <th>Address</th>
                       <td>--/--/-- </td>
                     </tr>
                     <tr>
-                      <th>Time Event</th>
+                      <th>Info</th>
                       <td>--:-- AM </td>
                     </tr>
-                    <tr>
-                      <th>Phone Number</th>
-                      <td>0128354824 </td>
-                    </tr>
-                    <tr>
-                      <th>Additional Info</th>
-                      <td> dggg </td>
-                    </tr>
+
                   </thead>
                 </table>
               </div>
