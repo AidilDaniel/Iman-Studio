@@ -10,7 +10,7 @@
         $booking_address = mysqli_real_escape_string($db, $_POST['booking_address']);
         $booking_info = mysqli_real_escape_string($db, $_POST['booking_info']);
 
-        // QUERY
+        // QUERY to insert data into database
         $query = mysqli_query($db,"INSERT INTO booking(booking_date, booking_time, phone_number, booking_package, booking_address, booking_info) VALUES ('$booking_date', '$booking_time', '$phone_number', '$booking_package', '$booking_address', '$booking_info')");
 
         if ($query) 
@@ -26,7 +26,7 @@
             <script type="text/javascript"> alert("Data Not Saved"); 
                 window.location.href = "reservation.php" 
             </script> '; 
-        }   //after click submit alert will popup and after click ok it will back to reservation page
+        }   //after click submit alert will popup and after click ok it will go to booked.php
 
     }
     
