@@ -84,7 +84,7 @@
                   <input type="password" placeholder="Enter your password" name="userpassword" required>
                 </div>
 
-                <div class="text"><a href="#" style="color: black;">Forgot password?</a></div>
+                <div class="text"><a href="../Reset Page/resetpass.php" style="color: black;">Forgot password?</a></div>
                 <div class="button input-box">
                   <input type="submit" value="Submit">
                 </div>

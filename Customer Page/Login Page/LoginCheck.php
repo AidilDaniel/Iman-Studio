@@ -29,10 +29,10 @@
                     header("Location:../Album Page/Album.php"); //redirect to Worker page
                 }
     
-                else if ($row['userroles'] == "manager" ) {
+                else if ($row['userroles'] == "admin" ) {
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
-                    $_SESSION['userroles'] = "manager";
+                    $_SESSION['userroles'] = "admin";
                     header("Location:../About Page/about.php"); //redirect to Manager page
                 }
     

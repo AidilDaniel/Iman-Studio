@@ -1,0 +1,109 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-image: url(images/bg.png);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#main-holder {
+    width: 40%;
+    height: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(28, 21, 21);
+    border-radius: 7px;
+    color:  #ffde00;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#email-error-msg-holder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#email-error-msg {
+    width: 23%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    background-color: #e58f8f;
+    opacity: 0;
+}
+
+#email-msg-second-line {
+    display: block;
+}
+
+#email-form {
+    align-self: flex-start;
+    height: 10%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.email-form-field::placeholder {
+    color: #000000;
+}
+
+.email-form-field {
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 10px;
+    border-radius: 1px;
+    outline: none;
+    padding: 0px 0px 5px 5px;
+    width: 300px;
+    height: 50px;
+    font-size: 17px;
+    text-align: center;
+}
+
+:placeholder-shown {
+    text-align: center;
+}
+
+#email-form-submit {
+    width: 100%;
+    padding: 10px;
+    padding-top: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ffde00;
+    font-weight: bold;
+    background-color: #3a3a3a;
+    cursor: pointer;
+    outline: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding-top: 100px;
+    width:100%;
+    height:50px;   /* Height of the footer */
+}
+
+.footer p {
+    color:rgb(255, 255, 255);
+}
