@@ -74,7 +74,7 @@
               <div class="title">HISTORY BOOKING</div> 
                   
               <div class="table-responsive">
-                <table class="table">
+                <table class="table" style="width: 120%;">
                     <thead>
                         <tr>
                             <th> Date </th>
@@ -100,81 +100,14 @@
                             }
                           }
                         ?>
-                        
-                    </thead>
+                      </thead>
                 </table>
               </div>
               </div>
             </form>  
           </div>
         </div>
-
-
-        
-        <div id="id01" class="modal">
-  
-          <form class="modal-content animate"  method="post">
-            <div class="container">
-
-              <div class="table-modal">
-                <table class="table">
-
-                  <thead>
-                    <tr>
-                      <th>Date</th>
-                      <td>--/--/-- </td>
-                    </tr>
-                    <tr>
-                      <th>Time</th>
-                      <td>asdfghj </td>
-                    </tr>
-                    <tr>
-                      <th>Phone Number</th>
-                      <td>dggg </td>
-                    </tr>
-                    <tr>
-                      <th>Package</th>
-                      <td>dggg@gmail.com </td>
-                    </tr>
-                    <tr>
-                      <th>Address</th>
-                      <td>--/--/-- </td>
-                    </tr>
-                    <tr>
-                      <th>Info</th>
-                      <td>--:-- AM </td>
-                    </tr>
-
-                  </thead>
-                </table>
-              </div>
-                <br>
-                <p><button type="button" onclick="document.getElementById('id01').style.display='none'"
-                   class="cancelbtn">Close</button></p>
-            </div> 
-                  
-            </div>
-          </form>
-
-        </div>
-
       </div>  
     </div>  
-    
-    <script>
-    // Get the modal
-      var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
-
   </body>
-
-
-
 </html>

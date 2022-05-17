@@ -88,9 +88,9 @@
                   <span class="details"></span>
                     <select name="booking_package" id="booking_page"  required>
                         <option value="">Choose Package</option>
-                        <option value="Package A">Package A</option>
-                        <option value="Package B">Package B</option>
-                        <option value="Package C">Package C</option>
+                        <option value="Pakej A">Pakej A</option>
+                        <option value="Pakej B">Pakej B</option>
+                        <option value="Pakej C">Pakej C</option>
                     </select>
                     <!--this is the select option-->
                 </div>
@@ -102,7 +102,7 @@
 
                 <div class="input-box"
                   <span class="details"></span>
-                  <textarea rows="8" cols="38" placeholder="Add Info" name="booking_info" required></textarea>
+                  <textarea rows="8" cols="38" placeholder="Add Info" name="booking_info"></textarea>
                 </div>
 
                 <div class="input-box"
