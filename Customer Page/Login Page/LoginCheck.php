@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require 'server.php';
 
     $errors = array();
@@ -37,6 +39,7 @@
                 }
     
                 else {
+                    session_destroy();
                     echo "failed";
                 }
             }
