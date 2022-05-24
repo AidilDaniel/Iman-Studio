@@ -10,16 +10,16 @@
 
 <body img src="background.png">   
     <main id="main-holder">
-        <h1 id="email-header">Reset Password</h1>
+        <h1 id="email-header">Forgot Password</h1>
     
     
         <div id="email-error-msg-holder">
             <p id="email-error-msg">Invalid email </p>
         </div>
      
-        <form id="email-form">
-            <input type="email" name="email" id="email-field" class="email-form-field" placeholder="Your e-mail address" required>  <!--for input box email-->
-            <input type="submit" value="Reset Password" id="email-form-submit">  <!--for button submit-->
+        <form action="forgotpassword.php" id="email-form" method="POST">
+            <input type="email" name="useremail" id="email-field" class="email-form-field" placeholder="Your e-mail address" required>  <!--for input box email-->
+            <input type="submit"name="send-reset-link" value="Send Link" id="email-form-submit">  <!--for button submit-->
             </p>
         </form>
   
@@ -28,6 +28,7 @@
     <div class="footer">
         <p>© 2020. All Rights Reserved. Designed by Iman Studio</p>
     </div>
+
 
 </body>
 

@@ -1,18 +1,11 @@
 <?php
-    session_start();
-    if(!isset($_SESSION["user"]))
-    {
-        header("");
-    }
-?>
+   $servername='localhost';
+   $username='root';
+   $password='';
+   $dbname = "imanstudio";
+   $conn=mysqli_connect($servername,$username,$password,"$dbname");
 
-<?php 
-  $db = mysqli_connect("localhost", "root", "", "imanstudio");  //database connection
-
-  $query = "select * from booking";
-  $db = mysqli_query($db, $query);
-  $num = mysqli_num_rows($db); //check in database any data have or no
-
+   $result = mysqli_query($conn,"SELECT * FROM booking");
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +54,7 @@
                     </li>
 
                     <li>
-                        <a class="booking" href="#">
+                        <a class="booking" href="#" style="background-color: #428bca;">
                             <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                             <span class="title">Booking Management</span>
                         </a>
@@ -88,7 +81,7 @@
                     <tr style="background-color: #428bca;">
                         <td>
 
-                            <table style="background: #428bca;">
+                            <table style="background: #428bca; ">
                                 <!--New Booking Counter -->
                                 <?php
                                     $db1 = mysqli_connect("localhost", "root", "", "imanstudio");  //database connection
@@ -97,9 +90,10 @@
                                     $c =0;
 
                                     while($row=mysqli_fetch_array($re)) {
+                                        $new = $row['book_status'];
                                         $id = $row['id'];
 
-                                        if($id == 1) {
+                                        if($new=="Pending") {
                                             $c = $c + 1;							
                                         }
                                                         
@@ -125,27 +119,31 @@
                                     <th>Address</th>
                                     <th>Addintional Info</th>
                                     <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
+
+                                <?php
+                                    $i=0;
+                                    while($row = mysqli_fetch_array($result)) {
+                                ?>
+
+                                <tr>
+                                    <td><?php echo $row["id"]; ?></td>
+                                    <td><?php echo $row["username"]; ?></td>
+                                    <td><?php echo $row["book_date"]; ?></td>
+                                    <td><?php echo $row["book_time"]; ?></td>
+                                    <td><?php echo $row["phone_no"]; ?></td>
+                                    <td><?php echo $row["book_package"]; ?></td>
+                                    <td><?php echo $row["book_address"]; ?></td>
+                                    <td><?php echo $row["book_info"]; ?></td>
+                                    <td><?php echo $row["book_status"]; ?></td>
+                                    <td><a href="updateform.php?id=<?php echo $row["id"]; ?>">Update</a></td>
                                 </tr>
-                                    <?php
-                                    if ($num>0) {
-                                        while($data = mysqli_fetch_assoc($db)){
-                                        echo "
-                                            <tr>
-                                            <td>".$data['id']."</td>
-                                            <td>".$data['username']."</td>
-                                            <td>".$data['book_date']."</td>
-                                            <td>".$data['book_time']."</td>
-                                            <td>".$data['phone_no']."</td>
-                                            <td>".$data['book_package']."</td>
-                                            <td>".$data['address']."</td>
-                                            <td>".$data['book_info']."</td>
-                                            </tr>
-                                        ";
-                                        }
+                                   
+                                <?php
+                                    $i++;
                                     }
-                                    ?>
-                                </tr>
+                                ?>
                             </table>
                         </td>
                     </tr>
@@ -162,9 +160,9 @@
                                     $r =0;
 
                                     while($row=mysqli_fetch_array($rre) ){		
-                                        $br = $row['stat'];
+                                        $br = $row['book_status'];
 
-                                            if($br=="Conform") {
+                                            if($br=="Ongoing") {
                                                 $r = $r + 1;
                                             }
                                     }
