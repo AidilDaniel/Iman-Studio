@@ -7,7 +7,7 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    function sendMail($useremail, $reset_token){
+    function sendMail($useremail, $resettoken){
         require('PHPMailer/PHPMailer.php');
         require('PHPMailer/SMTP.php');
         require('PHPMailer/Exception.php');
@@ -34,7 +34,7 @@
             $mail->Subject = 'Password Reset Link From ImanStudio';
             $mail->Body    = "We got a request from you to reset your password! <br>
                Click the link below: <br>
-               <a href='http://localhost/Iman-Studio/Customer Page/Reset Page/resetpass2.php?email=$useremail&reset_token=$reset_token'>
+               <a href='http://localhost/Iman-Studio/Customer Page/Reset Page/changepass.php?email=$useremail&resettoken=$resettoken'>
                     Reset Password
                 </a>";
         
@@ -53,11 +53,11 @@
         $result=mysqli_query($db, $query);
         if($result){
             if(mysqli_num_rows($result)==1){
-                $reset_token=bin2hex(random_bytes(16));
+                $resettoken=bin2hex(random_bytes(16));
                 date_default_timezone_set("Asia/Kuala_Lumpur");
                 $date=date("Y-m-d");
-                $query="UPDATE `user` SET `resettoken`='$reset_token',`resettokenexpire`='$date' WHERE `useremail`='$_POST[useremail]'";
-                if(mysqli_query($db, $query) && sendMail($_POST['useremail'],$reset_token)){
+                $query="UPDATE `user` SET `resettoken`='$resettoken',`resettokenexpire`='$date' WHERE `useremail`='$_POST[useremail]'";
+                if(mysqli_query($db, $query) && sendMail($_POST['useremail'],$resettoken)){
                     echo "
                         <script>
                             alert('Password Reset Link Sent To Mail');
