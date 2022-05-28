@@ -83,7 +83,7 @@ a:hover
 {
     display: none;
 }
-*/
+
 .row 
 {
     display: -ms-flexbox; /* IE10 */
@@ -237,41 +237,36 @@ a:hover
 .main .table-responsive th {
     height: 45px;
     background-color: #ffde00;
-  }
+}
 
 .main .table-responsive td {
     height: 40px;
     padding-left: 5px;
     background-color: rgb(236, 233, 233);
-  }
-
-.main .table-responsive td i {
-    padding-left: 27px;
-  }
- 
+}
 
 /*set table modal*/
 .modal .table-modal table, td, th {
-      border: 1px black;
-  }
+    border: 1px black;
+}
   
 .table-modal  table {
     border-collapse:inherit;
     background-color: rgb(255, 255, 255);
     margin-top: 20px;
-    padding-left: 15px;
-  }
+    padding-left: 100px;
+}
   
 .table-modal th {
     height: 45px;
-    text-align: right;
+    text-align: center;
     font-weight: bold;
     font-size: 20px;
-  }
+}
 
 .table-modal td {
     text-align: center;
     height: 40px;
     padding-left: 20px;
     font-size: 20px;
-  }
+}
