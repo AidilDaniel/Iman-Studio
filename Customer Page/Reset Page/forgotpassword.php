@@ -34,16 +34,17 @@
             $mail->Subject = 'Password Reset Link From ImanStudio';
             $mail->Body    = "We got a request from you to reset your password! <br>
                Click the link below: <br>
-               <a href='http://localhost/Iman-Studio/Customer Page/Reset Page/changepass.php?email=$useremail&resettoken=$resettoken'>
+               <a href='http://localhost/Iman-Studio/Customer Page/Reset Page/updatepassword.php?email=$useremail&resettoken=$resettoken'>
                     Reset Password
                 </a>";
         
             $mail->send();
             return true;
-            } 
-            catch (Exception $e) {
-                return false;
-            }
+        } 
+        catch (Exception $e) 
+        {
+            return false;
+        }
     }
 
 
