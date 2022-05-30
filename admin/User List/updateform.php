@@ -3,15 +3,12 @@
 $conn = mysqli_connect("localhost", "root", "", "imanstudio");  //database connection
 
 if(count($_POST)>0) {
-    mysqli_query($conn,"UPDATE booking set id='". $_POST['id']."' , book_date='".$_POST['book_date']."' , 
-    book_time='". $_POST['book_time']."' , phone_no='".$_POST['phone_no']."' , book_package='". $_POST['book_package']."'
-    , book_address='". $_POST['book_address']."' , book_info='". $_POST['book_info']."' , book_status='". $_POST['book_status']."'
-    WHERE id='". $_POST['id'] ."'");
+    mysqli_query($conn,"UPDATE user set id='". $_POST['id']."' , username='".$_POST['username']."' , 
+    name_user='". $_POST['name_user']."' , phone_no='".$_POST['phone_no']."' , user_status='". $_POST['user_status']."'");
 
-    $message = "Record Modified Successfully";
 }
 
-$result = mysqli_query($conn,"SELECT * FROM booking WHERE id='". $_GET['id']."'");
+$result = mysqli_query($conn,"SELECT * FROM user WHERE id='". $_GET['id']."'");
 $row= mysqli_fetch_array($result);
 ?> 
 
@@ -46,21 +43,21 @@ $row= mysqli_fetch_array($result);
             <div class=navigation>
                 <ul>     
                     <li>
-                        <a class="profile" href="#">
+                        <a class="profile" href="../User List/index.php" style="background-color: #428bca;">
                             <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
                             <span class="title">User Management</span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="reservation" href="#">
+                        <a class="reservation" href="../Album Page/addalbum.php">
                             <span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>
                             <span class="title">Album</span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="booking" href="#" style="background-color: #428bca;">
+                        <a class="booking" href="../Booking List/blist.php" >
                             <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                             <span class="title">Booking Management</span>
                         </a>
@@ -76,24 +73,30 @@ $row= mysqli_fetch_array($result);
             </div>
 
             <div class="Header-User">
-                <h1>Reservation <small>Update</small></h1>
+                <h1>User <small>Update</small></h1>
             </div>
 
             <div class="main">
                 <div class="container">
                     <form method="post" >
                         <div class="reserve-details">  
-
+                            
                             <div class="input-box"
-                                <label>Date</label>
+                                <label>Username</label>
                                 <span class="details"></span>
-                                <input type="date" placeholder="Event Date" name="book_date" value= "<?php echo $row['book_date']; ?>" >
+                                <input type="text" name="username" class="txtField" value="<?php echo $row['username']; ?>"></td>
                             </div>
 
                             <div class="input-box"
-                                <label>Time</label>
+                                <label>Name</label>
                                 <span class="details"></span>
-                                <input type="time" placeholder="Event Time" name="book_time" value= "<?php echo $row['book_time']; ?>">
+                                <input type="text" placeholder="Name" name="name_user" value= "<?php echo $row['name_user']; ?>">
+                            </div>
+
+                            <div class="input-box"
+                                <label>Email</label>
+                                <span class="details"></span>
+                                <input type="text" placeholder="Email" name="useremail" value= "<?php echo $row['useremail']; ?>">
                             </div>
 
                             <div class="input-box"
@@ -103,39 +106,20 @@ $row= mysqli_fetch_array($result);
                             </div>
 
                             <div class="input-box"
-                                <label>Package</label>
-                                <span class="details"></span>
-                                <input type="text" placeholder="Package" name="book_package" value= "<?php echo $row['book_package']; ?>">
-                            </div>
-
-                            <div class="input-box"
                                 <label>Status</label>
                                 <span class="details"></span>
-                                <input type="text" placeholder="Status" name="book_status" value= "<?php echo $row['book_status']; ?>">
+                                <input type="text" placeholder="Status" name="user_status" value= "<?php echo $row['user_status']; ?>">
                             </div>
 
                             <div class="input-box"
-                                <label>Username</label>
                                 <span class="details"></span>
                                 <input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-                                <input type="text" name="username" class="txtField" value="<?php echo $row['username']; ?>"></td>
                             </div>
 
-                            <div class="input-box"
-                                <label>Address</label>
-                                <span class="details"></span>
-                                <input placeholder="Address" name="book_address" value= "<?php echo $row['book_address']; ?>"></input>
-                            </div>
-
-                            <div class="input-box"
-                                <label>Information</label>
-                                <span class="details"></span>
-                                <input placeholder="Add Info" name="book_info" value= "<?php echo $row['book_info']; ?>"></input>
-                            </div>
 
                             <div class="btn-submit"   
                                 <span class="btn-details"></span>
-                                <button class="btn" name="update" id="update"><span>Update</span></button>  <!--Button Submit-->
+                                <a href="sqlupdate.php?id=<?php echo $row["id"]; ?>"><button class="btn" name="update" id="update"><span>Update</span></button></a>  <!--Button Submit-->
                             </div>
 
 

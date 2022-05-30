@@ -6,11 +6,12 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  overflow: hidden;
 }
 
 .full-page
 {
-  height: 100vh;
+  height: 200%;
   width: 100%;
   background: #e5ebf2;
   position: absolute;
@@ -19,13 +20,9 @@
 .sub-page
 {
   width: 100%;
-  height: 400%;
+  height: 100%;
   position: absolute;
-  background-image: url(images/bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #e5ebf2;
 }
 
 /* Top Navbar */
@@ -163,28 +160,10 @@
 
 /* Main content */
 .main {
-    display: flex;
-    font-size: 16px; /* Increased text to enable scrolling */
-    justify-content: center;
+  display: flex;
+  font-size: 16px; /* Increased text to enable scrolling */
+  justify-content: center;
 
-}
-
-/* Upload Picture*/
-.upload label, .file {
-  color: white;
-}
-
-.upload .file {
-  border: 1px solid #a9cae7;
-  font-size: 15px;
-}
-
-.upload .button {
-  font-size: 15px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
 }
 
 /* User List Table */
@@ -212,11 +191,49 @@ td, th {
 
 /* Button in table */
 button {
-  font-size: 17px;
-  padding: 8px;
-  background-color: #428bca;
-  color: white;
-  border: none;
+  font-size: 15px;
+  padding: 5px;
+  background-color: #c1e2ff;
+  border: 1px solid #428bca;
 }
 
+/* Paging */
+.paging-container {
+  margin-left: 13%;
+  display: flex;
+  font-size: 15px; /* Increased text to enable scrolling */
+}
 
+.pagination a {   
+
+  font-weight:bold;   
+  font-size:18px;   
+  color: black;   
+  float: left;   
+  padding: 8px 16px;   
+  text-decoration: none;   
+  border:1px solid black;   
+}
+
+.pagination a.active {   
+  background-color: skyblue;   
+}   
+.pagination a:hover:not(.active) {   
+background-color: rgb(255, 255, 255);   
+} 
+
+.pagination {
+  padding-left: 100px;
+}
+
+.pagination input {
+  width: 100px;
+  padding: 5px;
+}
+
+.pagination button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}

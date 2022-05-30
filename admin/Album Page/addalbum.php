@@ -3,14 +3,25 @@
    $username='root';
    $password='';
    $dbname = "imanstudio";
-
    $conn=mysqli_connect($servername,$username,$password,"$dbname");
 
-   $result = mysqli_query($conn,"SELECT * FROM images ORDER BY uploaded_on DESC");
+   $per_page_record = 10;  // Number of entries to show in a page.
 
-?>
+    // Look for a GET variable page if not found default is 1.        
+    if (isset($_GET["page"])) {    
+        $page  = $_GET["page"];    
+    }    
+    else {    
+        $page=1;    
+    }    
+    
+    $start_from = ($page-1) * $per_page_record;     
+    
+    $query = "SELECT * FROM images LIMIT $start_from, $per_page_record";     
+    $rs_result = mysqli_query ($conn, $query); 
+?> 
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Load an icon library -->
@@ -42,21 +53,21 @@
             <div class=navigation>
                 <ul>     
                     <li>
-                        <a class="profile" href="#">
+                        <a class="profile" href="../User List/index.php">
                             <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
                             <span class="title">User Management</span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="reservation" href="#" style="background-color: #428bca;">
+                        <a class="reservation" href="../Album Page/addalbum.php" style="background-color: #428bca;">
                             <span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>
                             <span class="title">Album</span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="booking" href="#" >
+                        <a class="booking" href="../Booking List/blist.php">
                             <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                             <span class="title">Booking Management</span>
                         </a>
@@ -72,7 +83,7 @@
             </div>
 
             <div class="Header-User">
-                <h1>Album <small>Management</small></h1>
+                <h1>Booking <small>Management</small></h1>
             </div>
 
             <div class="main">
@@ -98,7 +109,7 @@
                     <!--User List Table -->
                     <tr style="background-color:white;">
                         <td>
-                            <table style="width: 100%; " class="User-list">
+                        <table style="width: 100%; " class="User-list">
                                 <tr style="border-bottom: 1px solid black;">
                                     <th>#</th>
                                     <th>Image</th>
@@ -108,7 +119,7 @@
                                 </tr>
                                 <?php
                                     $i=0;
-                                    while($row = mysqli_fetch_array($result)) {
+                                    while($row = mysqli_fetch_array($rs_result)) {
                                         $imageURL = 'uploads/'.$row["file_name"];
                                 ?>
 
@@ -128,11 +139,56 @@
                             </table>
                         </td>
                     </tr>
-                    
                 </table>
+            </div>
 
+            <div class="paging-container">
+                <div class="pagination">    
+                    <?php  
+                        $query = "SELECT COUNT(*) FROM images";     
+                        $rs_result = mysqli_query($conn, $query);     
+                        $row = mysqli_fetch_row($rs_result);     
+                        $total_records = $row[0];     
+                                        
+                        echo "</br>";     
+                        // Number of pages required.   
+                        $total_pages = ceil($total_records / $per_page_record);     
+                        $pagLink = "";       
+                                    
+                        if($page>=2){   
+                            echo "<a href='addalbum.php?page=".($page-1)."'>  Prev </a>";   
+                        }       
+                                            
+                        for ($i=1; $i<=$total_pages; $i++) {   
+                            if ($i == $page) {   
+                                $pagLink .= "<a class = 'active' href='addalbum.php?page="  .$i."'>".$i." </a>";   
+                            }               
+                            else  {   
+                                $pagLink .= "<a href='addalbum.php?page=".$i."'>   ".$i." </a>";     
+                            }   
+                        };  
+
+                        echo $pagLink;   
+                            
+                        if($page<$total_pages){   
+                            echo "<a href='addalbum.php?page=".($page+1)."'>  Next </a>";   
+                        }     
+                    ?>    
+
+                    <input id="page" type="number" min="1" max="<?php echo $total_pages?>" placeholder="<?php echo $page."/".$total_pages; ?>" required>   
+                    <button onClick="go2Page();">Go</button>
+
+                    <script>   
+                        function go2Page()   
+                        {   
+                            var page = document.getElementById("page").value;   
+                            page = ((page><?php echo $total_pages; ?>)?<?php echo $total_pages; ?>:((page<1)?1:page));   
+                            window.location.href = 'addalbum.php?page='+page;   
+                        }   
+                    </script>
+                </div>
             </div>
         </div>
     </div>
-  </body>
+</body>
 </html>
