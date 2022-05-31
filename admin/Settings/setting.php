@@ -17,7 +17,7 @@
     
     $start_from = ($page-1) * $per_page_record;     
     
-    $query = "SELECT * FROM booking LIMIT $start_from, $per_page_record";     
+    $query = "SELECT * FROM user WHERE userroles='admin' LIMIT $start_from, $per_page_record";     
     $rs_result = mysqli_query ($conn, $query); 
 ?> 
 
@@ -27,15 +27,14 @@
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="blist.css">
+    <link rel="stylesheet" href="setting.css">
 </head>
 <body>
     <div class="full-page">
         <div class="sub-page">
 
             <div class="navbar">
-                <a href="#home">AIDIL ( ADMIN )</a>
-                <!--<a href="../User List/index.php"><?php echo $_SESSION["user"]; ?></a>-->
+                <a href="../User List/index.php">MAIN MENU</a>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><i class="fa fa-caret-down"></i></button>
 
@@ -53,68 +52,31 @@
             <div class=navigation>
                 <ul>     
                     <li>
-                        <a class="profile" href="../User List/index.php">
+                        <a class="profile" href="#" style="background-color: #428bca;">
                             <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                            <span class="title">User Management</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="reservation" href="../Album Page/addalbum.php" >
-                            <span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>
-                            <span class="title">Album</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="booking" href="../Booking List/blist.php" style="background-color: #428bca;">
-                            <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                            <span class="title">Booking Management</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="booking" href="#">
-                            <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                            <span class="title">Payment</span>
+                            <span class="title">Admin Management</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="Header-User">
-                <h1>Booking <small>Management</small></h1>
+                <h1>Administrator <small>Account</small></h1>
+            </div>
+
+            <div class="add-admin">
+                <button>Add New Admin</button>
             </div>
 
             <div class="main">
+
+            
 
                 <table style="width:100%; background-color: #428bca;" class="User-List-Container">
 
                     <!--New User counter and search -->
                     <tr style="background-color: #428bca;">
-                        <td>
-                            <table style="background: #428bca; ">
-                                <!--New Booking Counter -->
-                                <?php
-                                    $db1 = mysqli_connect("localhost", "root", "", "imanstudio");  //database connection
-                                    $sql = "select * from booking";
-                                    $re = mysqli_query($db1,$sql);
-                                    $p =0;
-
-                                    while($row=mysqli_fetch_array($re)) {
-                                        $new = $row['book_status'];
-                                        $id = $row['id'];
-
-                                        if($new=="Pending") {
-                                            $p = $p + 1;							
-                                        }
-                                                        
-                                    }						
-                                ?>
-
-                                <td style="background-color: white;">New Booking (<?php echo $p; ?>)</td>
-                            </table>
-                        </td>
+                        <td></td>
                     </tr>
 
                     <!--User List Table -->
@@ -124,14 +86,10 @@
                                 <tr style="border-bottom: 1px solid black;">
                                     <th>#</th>
                                     <th>Username</th>
-                                    <th>Book Date</th>
-                                    <th>Book TIme</th>
+                                    <th>Email</th>
                                     <th>Phone No</th>
-                                    <th>Package</th>
-                                    <th>Address</th>
-                                    <th>Additional Info</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <th>Actions</th>
                                 </tr>
 
                                 <?php
@@ -142,13 +100,9 @@
                                 <tr>
                                     <td><?php echo $row["id"]; ?></td>
                                     <td><?php echo $row["username"]; ?></td>
-                                    <td><?php echo $row["book_date"]; ?></td>
-                                    <td><?php echo $row["book_time"]; ?></td>
+                                    <td><?php echo $row["Useremail"]; ?></td>
                                     <td><?php echo $row["phone_no"]; ?></td>
-                                    <td><?php echo $row["book_package"]; ?></td>
-                                    <td><?php echo $row["book_address"]; ?></td>
-                                    <td><?php echo $row["book_info"]; ?></td>
-                                    <td><?php echo $row["book_status"]; ?></td>
+                                    <td><?php echo $row["user_status"]; ?></td>
                                     <td>
                                         <a href="updateform.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:green; font-size:20px;"></i></a>   
                                         <a href="sqldel.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-minus-square-o" aria-hidden="true" style="color:red; font-size:20px;"></i></a>
@@ -171,25 +125,21 @@
                                 <?php
 
                                     $db2 = mysqli_connect("localhost", "root", "", "imanstudio");  //database connection
-                                    $rsql = "SELECT * FROM `booking`";
+                                    $rsql = "SELECT * FROM `user` WHERE userroles='admin'";
                                     $rre = mysqli_query($db2,$rsql);
                                     $r =0;
 
                                     while($row=mysqli_fetch_array($rre) ){		
-                                        $br = $row['book_status'];
+                                        $br = $row['user_status'];
 
-                                            if($br=="Completed") {
-                                                $r = $r + 1;
-                                            }
-
-                                            elseif($br=="Ongoing"){
+                                            if($br=="Active") {
                                                 $r = $r + 1;
                                             }
                                     }
                                                         
                                 ?>
 
-                                <td style="background-color: #428bca; color:white">Booked Reservation (<?php echo $r; ?>)</td>
+                                <td style="background-color: #428bca; color:white">Registered Admin (<?php echo $r; ?>)</td>
                             </table>
                         </td>
                     </tr>
@@ -199,7 +149,7 @@
             <div class="paging-container">
                 <div class="pagination">    
                     <?php  
-                        $query = "SELECT COUNT(*) FROM booking";     
+                        $query = "SELECT COUNT(*) FROM user  WHERE userroles='admin'";     
                         $rs_result = mysqli_query($conn, $query);     
                         $row = mysqli_fetch_row($rs_result);     
                         $total_records = $row[0];     
@@ -210,22 +160,22 @@
                         $pagLink = "";       
                                     
                         if($page>=2){   
-                            echo "<a href='blist.php?page=".($page-1)."'>  Prev </a>";   
+                            echo "<a href='settings.php?page=".($page-1)."'>  Prev </a>";   
                         }       
                                             
                         for ($i=1; $i<=$total_pages; $i++) {   
                             if ($i == $page) {   
-                                $pagLink .= "<a class = 'active' href='blist.php?page="  .$i."'>".$i." </a>";   
+                                $pagLink .= "<a class = 'active' href='settings.php?page="  .$i."'>".$i." </a>";   
                             }               
                             else  {   
-                                $pagLink .= "<a href='blist.php?page=".$i."'>   ".$i." </a>";     
+                                $pagLink .= "<a href='settings.php?page=".$i."'>   ".$i." </a>";     
                             }   
                         };  
 
                         echo $pagLink;   
                             
                         if($page<$total_pages){   
-                            echo "<a href='blist.php?page=".($page+1)."'>  Next </a>";   
+                            echo "<a href='settings.php?page=".($page+1)."'>  Next </a>";   
                         }     
                     ?>    
 
@@ -237,7 +187,7 @@
                         {   
                             var page = document.getElementById("page").value;   
                             page = ((page><?php echo $total_pages; ?>)?<?php echo $total_pages; ?>:((page<1)?1:page));   
-                            window.location.href = 'blist.php?page='+page;   
+                            window.location.href = 'settings.php?page='+page;   
                         }   
                     </script>
                 </div>

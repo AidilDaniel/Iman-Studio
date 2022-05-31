@@ -30,13 +30,13 @@ $row= mysqli_fetch_array($result);
 
             <div class="navbar">
                 <a href="#home">AIDIL ( ADMIN )</a>
-                <!--<a href="#home"><?php echo $_SESSION["user"]; ?></a>-->
+                <!--<a href="../User List/index.php"><?php echo $_SESSION["user"]; ?></a>-->
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><i class="fa fa-caret-down"></i></button>
 
                     <div class="dropdown-content">
-                        <a href="#">User Profile</a>
-                        <a href="#">Settings</a>
+                        <a href="../Profile/profile.php">User Profile</a>
+                        <a href="../Settings/setting.php">Settings</a>
                         <a href="#">Logout</a>
                     </div>
                     
