@@ -4,7 +4,6 @@
   $query = "select * from booking";
   $db = mysqli_query($db, $query);
   $num = mysqli_num_rows($db); //check in database any data have or no
-
 ?>
 
 <!DOCTYPE html>
@@ -43,8 +42,7 @@
         </div>
 
         <div class=navigation>
-          <ul>
-                  
+          <ul>   
             <li>
               <a class="profile" href="../Book Online Page/book.php">
                 <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
@@ -65,48 +63,11 @@
                 <span class="title">Booking</span>
               </a>
             </li>
-
           </ul>
         </div>
 
         <div class="main">
-          <div class="container">
-            <form action="#">
-              <div class="title">HISTORY BOOKING</div> 
-
-                <div class="table-responsive">
-                  <table class="table" style="width: 120%;">
-                    <thead>
-                      <tr>
-                        <th> Date </th>
-                        <th> Time </th>
-                        <th> Phone Number </th>
-                        <th> Package </th>
-                        <th> Address </th>
-                        <th> Info </th>
-                      </tr>
-                      <?php
-                        if ($num>0) {
-                          while($data = mysqli_fetch_assoc($db)){
-                            echo "
-                              <tr>
-                                <td>".$data['booking_date']."</td>
-                                <td>".$data['booking_time']."</td>
-                                <td>".$data['phone_number']."</td>
-                                <td>".$data['booking_package']."</td>
-                                <td>".$data['booking_address']."</td>
-                                <td>".$data['booking_info']."</td>
-                              </tr>
-                            ";
-                          }
-                        }
-                      ?>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-            </form>
-          </div>
+          You need to be logged in to view this page
         </div>  
       </div>
     </div>  

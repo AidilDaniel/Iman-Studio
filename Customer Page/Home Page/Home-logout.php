@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>Imanstudio.com/Home</title>
     
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home-logout.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -24,15 +24,15 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><a href="../Home Page/Home.php"><img src="images/logo.png"></a></label>
+            <label class="logo"><a href="../Home Page/Home-logout.php"><img src="images/logo.png"></a></label>
 
             <ul>
-              <li><a href="../Home Page/Home.php"style="color: #ffde00;">Home</a></li>
-              <li><a href="../About Page/about.php">About</a></li>
-              <li><a href="../Album Page/album.php">Album</a></li>
-              <li><a href="../Contact Page/Contact.php">Contact</a></li>
-              <li><a href="../Book Online Page/book.php">Book Online</a></li>
-              <li><a href="../Login Page/login.php">Login</a></li>
+              <li><a href="../Home Page/Home-logout.php"style="color: #ffde00;">Home</a></li>
+              <li><a href="../About Page/about-logout.php">About</a></li>
+              <li><a href="../Album Page/album-logout.php">Album</a></li>
+              <li><a href="../Contact Page/Contact-logout.php">Contact</a></li>
+              <li><a href="../Book Online Page/book-logout.php">Book Online</a></li>
+              <li><a href="../Login Page/logout.php">LogOut</a></li>
             </ul>
           </nav>
         </div>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="overlay">
-              <div class="text"><a href="../Book Online Page/reservation.php">BOOK NOW!!</a></div>
+              <div class="text"><a href="../Book Online Page/reservation-logout.php">BOOK NOW!!</a></div>
             </div>
           </div>
 
@@ -60,7 +60,7 @@
             </div>
 
             <div class="overlay">
-              <div class="text"><a href="../Book Online Page/reservation.php">BOOK NOW!!</a></div>
+              <div class="text"><a href="../Book Online Page/reservation-logout.php">BOOK NOW!!</a></div>
             </div>
           </div>
 
@@ -70,7 +70,7 @@
             </div>
 
             <div class="overlay">
-              <div class="text"><a href="../Book Online Page/reservation.php">BOOK NOW!!</a></div>
+              <div class="text"><a href="../Book Online Page/reservation-logout.php">BOOK NOW!!</a></div>
             </div>
 
           </div>

@@ -27,6 +27,15 @@
     background-attachment: fixed;
 }
 
+.header
+{
+
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 nav
 {
     height: 80px;
@@ -138,61 +147,60 @@ a:hover
         font-size: 20px;
     }
 
+    a:hover 
+    {
+        color: #ffde00;
+    }
+
     #check:checked ~ ul
     {
         left: 0;
     }
 }
-
-.navigation 
+  
+/* Create four equal columns that sits next to each other */
+.column 
 {
-    position: absolute;
-    background-image: url(images/bg.png);
-    z-index: 1;
-    overflow-x: hidden;
-    width: 200px;
-    height: 100%;
-    transition: 0.5s;
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
-
-.navigation ul 
+  
+.column img 
 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-top: 8px;
+    vertical-align: middle;
     width: 100%;
-    height: 100%;
 }
-
-.navigation ul li 
+  
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) 
 {
-    position: relative;
-    width: 100%;
-    list-style: none;
+    .column 
+    {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
 }
-
-.navigation ul li a 
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) 
 {
-    padding-top: 15px;
-    padding-left: 30px;
-    padding-bottom: 15px;
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: #ffff;
-    font-size: 20px;
+    .column 
+    {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
 }
 
-.navigation a:hover {
-    background-color: #323232;
-}
+h3
+{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 35px;
 
-/* Main content */
-.main {
-    display: flex;
-    font-size: 20px; /* Increased text to enable scrolling */
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-    padding: 0px 10px;
 }

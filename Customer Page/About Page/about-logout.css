@@ -27,6 +27,15 @@
     background-attachment: fixed;
 }
 
+.header
+{
+
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 nav
 {
     height: 80px;
@@ -138,61 +147,35 @@ a:hover
         font-size: 20px;
     }
 
+    a:hover 
+    {
+        color: #ffde00;
+    }
+
     #check:checked ~ ul
     {
         left: 0;
     }
 }
 
-.navigation 
-{
-    position: absolute;
-    background-image: url(images/bg.png);
-    z-index: 1;
-    overflow-x: hidden;
-    width: 200px;
-    height: 100%;
-    transition: 0.5s;
-}
 
-.navigation ul 
+.page-content img
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.navigation ul li 
-{
-    position: relative;
-    width: 100%;
-    list-style: none;
-}
-
-.navigation ul li a 
-{
-    padding-top: 15px;
-    padding-left: 30px;
-    padding-bottom: 15px;
-    position: relative;
+    width: 15%;
+    padding-top: 50px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    text-decoration: none;
-    color: #ffff;
-    font-size: 20px;
+    
 }
 
-.navigation a:hover {
-    background-color: #323232;
+.page-content p
+{
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    font-size: 120%;
 }
-
-/* Main content */
-.main {
-    display: flex;
-    font-size: 20px; /* Increased text to enable scrolling */
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-    padding: 0px 10px;
-}
+  
