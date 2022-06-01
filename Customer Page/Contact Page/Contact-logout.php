@@ -1,10 +1,20 @@
+<?php 
+  session_start();
+  include "Server.php";
+
+  $query = "SELECT `useremail` FROM `user` WHERE '$_SESSION[useremail]'";
+  $result = mysqli_query($db,$query); //check in database any data have or no
+  if(empty($_SESSION["useremail"])) {
+    header("Location:../Login Page/login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Imanstudio.com/Contact</title>
     
-    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="Contact-logout.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -20,15 +30,15 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><a href="../Home Page/Home.php"><img src="images/logo.png"></a></label>
+            <label class="logo"><a href="../Home Page/Home-logout.php"><img src="images/logo.png"></a></label>
 
             <ul>
-              <li><a href="../Home Page/Home.php">Home</a></li>
-              <li><a href="../About Page/about.php">About</a></li>
-              <li><a href="../Album Page/album.php">Album</a></li>
-              <li><a href="../Contact Page/Contact.php"style="color: #ffde00;">Contact</a></li>
-              <li><a href="../Book Online Page/book.php" >Book Online</a></li>
-              <li><a href="../Login Page/login.php">Login</a></li>
+              <li><a href="../Home Page/Home-logout.php">Home</a></li>
+              <li><a href="../About Page/about-logout.php">About</a></li>
+              <li><a href="../Album Page/album-logout.php">Album</a></li>
+              <li><a href="../Contact Page/Contact-logout.php"style="color: #ffde00;">Contact</a></li>
+              <li><a href="../Book Online Page/book-logout.php" >Book Online</a></li>
+              <li><a href="../Login Page/logout.php">LogOut</a></li>
             </ul>
           </nav>
         </div>
@@ -54,7 +64,7 @@
                 <form class="message-form" action="#" method="post">
                 <h1 class="main-heading">Leave us a message</h1>
 				        <textarea name="contact_message" rows = "15" cols = "68" placeholder="Leave a message" required></textarea>
-				        <button onclick="deny()" class="btn" name="submit">Submit</button>
+				        <button class="btn" name="submit">Submit</button>
 				      </form>
 			      </div>
           </div>
@@ -65,9 +75,7 @@
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
     </script>
     <script>
-      function deny() {
-        alert("Please Login/Register First")
-      }
+      $('.message a').click(function(){$('form').animate({height: "toggle",opacity: "toggle"},"slow");});
     </script>
 </body>
 </html>

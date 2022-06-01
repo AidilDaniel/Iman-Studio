@@ -21,7 +21,7 @@
                     $_SESSION['useremail'] = $useremail;
                     $_SESSION['userpassword'] = $userpassword;
                     $_SESSION['userroles'] = "user";
-                    header("Location:../Home Page/Home.php"); //redirect to Customer page
+                    header("Location:../Home Page/Home-logout.php"); //redirect to Customer page
                 }
     
                 else if ($row['userroles'] == "worker" ) {

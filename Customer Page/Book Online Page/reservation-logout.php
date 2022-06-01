@@ -1,16 +1,26 @@
+<?php 
+  session_start();
+  include "server.php";
+
+  $query = "SELECT `useremail` FROM `user` WHERE '$_SESSION[useremail]'";
+  $result = mysqli_query($db,$query); //check in database any data have or no
+  if(empty($_SESSION["useremail"])) {
+    header("Location:../Login Page/login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Imanstudio.com/Book</title>
     
-    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="reservation-logout.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   </head>
   <body>
-    <div class="full-page"> 
+    <div class="full-page">
       <div class="sub-page">
 
         <div class="navigation-bar">
@@ -19,15 +29,15 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><a href="../Home Page/Home.php"><img src="images/logo.png"></a></label>
+            <label class="logo"><a href="../Home Page/Home-logout.php"><img src="images/logo.png"></a></label>
 
             <ul>
-              <li><a href="../Home Page/Home.php">Home</a></li>
-              <li><a href="../About Page/about.php">About</a></li>
-              <li><a href="../Album Page/album.php">Album</a></li>
-              <li><a href="../Contact Page/Contact.php">Contact</a></li>
-              <li><a href="../Book Online Page/book.php" style="color: #ffde00;">Book Online</a></li>
-              <li><a href="../Login Page/login.php">Login</a></li>
+              <li><a href="../Home Page/Home-logout.php">Home</a></li>
+              <li><a href="../About Page/about-logout.php">About</a></li>
+              <li><a href="../Album Page/album-logout.php">Album</a></li>
+              <li><a href="../Contact Page/Contact-logout.php">Contact</a></li>
+              <li><a href="../Book Online Page/book-logout.php" style="color: #ffde00;">Book Online</a></li>
+              <li><a href="../Login Page/logout.php">LogOut</a></li>
             </ul>
           </nav>
         </div>
@@ -36,21 +46,21 @@
             <ul>
                 
               <li>
-                <a class="profile" href="../Book Online Page/book.php">
+                <a class="profile" href="../Book Online Page/book-logout.php">
                     <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
                     <span class="title">Profile</span>
                 </a>
               </li>
 
               <li>
-                <a class="reservation" href="../Book Online Page/reservation.php" style="color: #ffde00;">
+                <a class="reservation" href="../Book Online Page/reservation-logout.php" style="color: #ffde00;">
                     <span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>
                     <span class="title">Reservation</span>
                 </a>
               </li>
 
               <li>
-                  <a class="booking" href="../Book Online Page/booked.php">
+                  <a class="booking" href="../Book Online Page/booked-logout.php">
                     <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></i></span>
                     <span class="title">Booking</span>
                   </a>
@@ -61,7 +71,7 @@
 
         <div class="main">
           <div class="container">
-            <form action="" method="">
+            <form action="" method="post" >
               <div class="title">RESERVATION</div>
               <div class="reserve-details">  
 
@@ -108,16 +118,9 @@
 
                 <div class="btn-submit"   
                   <span class="btn-details"></span>
-                  <button class="btn" name="submit" onclick="deny()"><span>Submit</span></button>  <!--Button Submit-->
+                  <button class="btn" name="submit"><span>Submit</span></button>  <!--Button Submit-->
                 </div>
 
-                <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
-                </script>
-                <script>
-                  function deny() {
-                    alert("Please Login/Register First")
-                  }
-                </script>
               </div>
               </div>
             </form>  

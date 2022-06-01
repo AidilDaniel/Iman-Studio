@@ -46,11 +46,11 @@
                 else
                 {
                     echo "
-                    <script>
-                        alert('Server Down! Try Again Later...');
-                        window.location.href='../Login Page/login.php';
-                    </script>
-                ";
+                        <script>
+                            alert('Server Down! Try Again Later...');
+                            window.location.href='../Login Page/login.php';
+                        </script>
+                    ";
                 }
             }
             else

@@ -27,6 +27,14 @@
     background-attachment: fixed;
 }
 
+.header
+{
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    padding-top: 20px;
+}
+
 nav
 {
     height: 80px;
@@ -138,61 +146,94 @@ a:hover
         font-size: 20px;
     }
 
+    a:hover 
+    {
+        color: #ffde00;
+    }
+
     #check:checked ~ ul
     {
         left: 0;
     }
 }
 
-.navigation 
+.row
 {
-    position: absolute;
-    background-image: url(images/bg.png);
-    z-index: 1;
-    overflow-x: hidden;
-    width: 200px;
-    height: 100%;
-    transition: 0.5s;
-}
-
-.navigation ul 
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.navigation ul li 
-{
-    position: relative;
-    width: 100%;
-    list-style: none;
-}
-
-.navigation ul li a 
-{
-    padding-top: 15px;
-    padding-left: 30px;
-    padding-bottom: 15px;
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: #ffff;
-    font-size: 20px;
-}
-
-.navigation a:hover {
-    background-color: #323232;
-}
-
-/* Main content */
-.main {
+    margin-top: 50px;
     display: flex;
-    font-size: 20px; /* Increased text to enable scrolling */
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-    padding: 0px 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-1
+{
+    flex-basis: 50%;
+    min-width: 500px;
+}
+
+.main-heading
+{
+    color: rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    margin-right: 300px;
+}
+
+.form
+{
+	position: relative;
+	margin: 0 auto 90px;
+	padding: 65px;
+    margin-top: -114px;
+    text-align: center;
+}
+
+.form input
+{
+	font-family: sans-serif;
+	outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+	width: 40%;
+	margin: 0 0 15px;
+	padding: 15px;
+	font-size: 20px;
+}
+
+.form button
+{
+	font-family: sans-serif;
+	width: 110px;
+    color: rgb(0, 0, 0);
+	font-size: 17px;
+    font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+    border: none;
+    margin-left:370px;
+    margin-top: 10px;
+    background: rgba(255,221,0);
+}
+
+.form .message
+{
+    font-size: 25px;
+	margin: 5px 0 0;
+    color: white;
+}
+
+.form .message a
+{
+	color: orangered;
+	text-decoration: none;
+}
+
+.defination
+{
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    padding-left: 15px;
 }
